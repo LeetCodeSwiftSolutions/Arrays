@@ -24,3 +24,16 @@ print(runningSum([1,2,3,4]))
 print(runningSum([1,1,1,1,1]))
 print(runningSum([3,1,2,10,1]))
 
+
+func runningSum2(_ nums: [Int]) -> [Int] {
+    var nums = nums
+    for index in 1..<nums.count {
+        nums[index] = nums[index-1] + nums[index]
+    }
+    return nums
+}
+
+// Casos de prueba para la 2da solución
+print(runningSum2([5]))
+print(runningSum2([2,2,2,2,2]))
+print(runningSum2([4,5,1,-10,9]))
