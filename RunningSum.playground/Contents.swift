@@ -1,4 +1,4 @@
-/*
+/* SUMA ACUMULADA DE UN ARREGLO.
  Dado un arreglo nums, calcula su suma acumulada: para cada índice i, el valor es la suma de los elementos desde nums[0] hasta nums[i]. Devuelve un nuevo arreglo con esas sumas en el mismo orden. Ejemplo: [1,2,3,4] → [1,3,6,10]. Los números pueden ser negativos o positivos y la longitud del arreglo va de 1 a 1000.
 
  Given an array nums, compute its running sum: for each index i, the value equals the sum of the elements from nums[0] through nums[i]. Return a new array containing these sums in order. Example: [1,2,3,4] → [1,3,6,10]. Numbers may be negative or positive and the array length is between 1 and 1000.

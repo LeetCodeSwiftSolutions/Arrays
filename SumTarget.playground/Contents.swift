@@ -17,7 +17,9 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     return []
 }
 
+/// Pruebas
 print(twoSum([2,7,11,15], 9))
+
 
 /// Solución optimizada.
 func twoSumOptimized(_ nums: [Int], _ target: Int) -> [Int] {
@@ -33,4 +35,5 @@ func twoSumOptimized(_ nums: [Int], _ target: Int) -> [Int] {
     return [] // No se encontró ningún par
 }
 
+/// Pruebas
 print(twoSumOptimized([2,7,11,15], 9))

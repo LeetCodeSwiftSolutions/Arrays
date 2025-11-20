@@ -3,6 +3,7 @@ Se te da un arreglo de enteros **nums** y un entero **original**, que es el núm
 
 You are given an integer array **nums** and an integer **original**, which is the initial number to search for. While **original** is found in **nums**, you must multiply it by 2 and repeat the check with the new value. When **original** is no longer present in the array, the process stops, and you return the final value. Constraints: 1 <= nums.length <= 1000, 1 <= nums[i], original <= 1000. */
 
+
 import Foundation
 
 /// Solución original

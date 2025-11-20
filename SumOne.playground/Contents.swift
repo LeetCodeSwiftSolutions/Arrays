@@ -3,7 +3,8 @@ Dado un arreglo digits que representa un entero sin ceros a la izquierda (más s
 
 Given an array digits representing an integer with no leading zeros (most significant first), add 1 and return the resulting array. Handle carry: turn trailing 9s into 0 and propagate left; if all digits are 9, prepend a 1. Constraints: 1 <= digits.length <= 100, each digit in 0..9, no leading zeros. */
 
-/// Solución optimizada
+
+/// Solución optimizada (de la comunidad de LeetCode)
 func plusOne(_ digits: [Int]) -> [Int] {
     var digits = digits
     
@@ -22,11 +23,11 @@ func plusOne(_ digits: [Int]) -> [Int] {
     return digits
 }
 
+/// Pruebas
 plusOne([7,2,8,5,0,9,1,2,9,5,7,2,8,5,0,9,1,2,9,5,7,2,8,5,0,9,1,2,9,5,7,2,8,5,0,9,1,2,9,5,7,2,8,5,0,9,1,2,9,5,0,0,0,9])
 
 
-
-/// Solución original (sirve solo para enteros bit-64)
+/// Solución original (sirve solo para enteros que no superen el valor máximo de Int <64 bits>)
 func plusOneInt64(_ digits: [Int]) -> [Int] {
     // Convertimos el arreglo en un número tipo String, y lo casteamos a Int
     var num = Int(digits.map{"\($0)"}.joined(separator: "")) ?? 0
@@ -47,4 +48,5 @@ func plusOneInt64(_ digits: [Int]) -> [Int] {
     return newArray
 }
 
+/// Pruebas
 plusOneInt64([7,2,8,5,0,9,1,2,9,5])
