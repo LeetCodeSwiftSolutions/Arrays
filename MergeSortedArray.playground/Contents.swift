@@ -13,11 +13,9 @@ func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
     
     // Agregamos todos los elementos de nums2 a nums1
     for i in m..<m+n {
-        nums1.insert(nums2[i-m], at: i)
+        nums1[i] = nums2[i-m]
     }
     
-    // Eliminamos los ceros
-    nums1 = nums1.dropLast(n)
     // Ordenamos nuevamente nums1
     nums1 = nums1.sorted()
 }
