@@ -4,7 +4,7 @@
  Given an array nums, compute its running sum: for each index i, the value equals the sum of the elements from nums[0] through nums[i]. Return a new array containing these sums in order. Example: [1,2,3,4] → [1,3,6,10]. Numbers may be negative or positive and the array length is between 1 and 1000.
  */
 
-/// Solución inicial
+/// Solución original
 func runningSum(_ nums: [Int]) -> [Int] {
     // Si el arreglo solo tiene un elemento, no es necesario realizar ningún cálculo.
     guard nums.count > 1 else { return nums }
@@ -26,7 +26,7 @@ print(runningSum([1,1,1,1,1]))
 print(runningSum([3,1,2,10,1]))
 
 
-/// Solución optimizada
+/// Solución optimizada, de la comunidad
 func runningSum2(_ nums: [Int]) -> [Int] {
     var nums = nums // Swift no permite modificar el parámetro de entrada
     for i in 1..<nums.count {
@@ -39,3 +39,18 @@ func runningSum2(_ nums: [Int]) -> [Int] {
 print(runningSum2([5]))
 print(runningSum2([2,2,2,2,2]))
 print(runningSum2([4,5,1,-10,9]))
+
+
+/// Solución adicional (original)
+func runningSum3(_ nums: [Int]) -> [Int] {
+    var runningSumArray = nums
+    for i in 0..<nums.count {
+        runningSumArray[i] = nums[0...i].reduce(0, +)
+    }
+    return runningSumArray
+}
+
+// Casos de prueba para la solución adicional
+print(runningSum3([3,1,2,10,1]))
+print(runningSum3([2,2,2,2,2]))
+print(runningSum3(([4,5,1,-10,9])))
