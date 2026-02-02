@@ -4,7 +4,9 @@ Dado un arreglo de enteros nums, devuelve true si algún valor aparece al menos 
 Given an integer array nums, return true if any value appears at least twice, and false if every element is distinct. The array length ranges from 1 to 10^5, and values are between -10^9 and 10^9. */
 
 ///
-/// Original Solution. Time Complexity: O(n), Space Complexity: O(n). Beats 98% in Runtime & 38% in Memory.
+/// Original Solution.
+/// Time Complexity: O(n), Space Complexity: O(n).
+/// Beats 98% in Runtime & 38% in Memory.
 ///
 func containsDuplicate(_ nums: [Int]) -> Bool {
     Set(nums).count != nums.count
@@ -12,8 +14,8 @@ func containsDuplicate(_ nums: [Int]) -> Bool {
 
 
 ///
-/// Test cases
+/// Original test cases
 ///
-containsDuplicate([1, 2, 3, 1]) // Expected: true
-containsDuplicate([1, 2, 3, 4]) // Expected: false
-containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]) // Expected: true
+containsDuplicate([-10, 7, -1, 19, -15, 7]) // Expected: true
+containsDuplicate([-80, -70, -60, -50, -40, -30]) // Expected: false
+containsDuplicate([5, 10, 15, 15, 20, 25, 25, 30, 35]) // Expected: true
