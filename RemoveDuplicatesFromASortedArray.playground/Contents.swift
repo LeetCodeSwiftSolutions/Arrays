@@ -15,11 +15,10 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
     return pos
 }
 
-
 /// Test cases
-var nums = [1,1,2]
-removeDuplicates(&nums) // Expected: 2 (nums = [1, 2, 2])
-nums = [1,2,2,3,3,4]
-removeDuplicates(&nums) // Expected: 4 (nums = [1, 2, 3, 4, 3, 4]
-nums = [-10,-9,-5,-5,-5,-4,-1,0,5,7,9]
+var nums = [5, 10, 15, 15, 20, 20, 20, 30]
+removeDuplicates(&nums) // Expected: 5 (nums = [5, 10, 15, 20, 30, 20, 20, 30])
+nums = [-30, -29, -29, -28, -27, -27, -25, -25]
+removeDuplicates(&nums) // Expected: 5 (nums = [-30, -29, -28, -27, -25, -27, -25, -25]
+nums = [-10, -9, -5, -5, -5, -4, -1, 0, 5, 7, 9]
 removeDuplicates(&nums) // Expected: 9 (nums = [-10, -9, -5, -4, -1, 0, 5, 7, 9, 7, 9])
